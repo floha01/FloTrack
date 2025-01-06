@@ -1,4 +1,4 @@
-namespace FloTrack.Models
+﻿namespace FloTrack.Models
 {
     public class ErrorViewModel
     {

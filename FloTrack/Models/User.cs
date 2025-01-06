@@ -1,7 +1,10 @@
-﻿namespace FloTrack.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FloTrack.Models
 {
     public class User
     {
+        [Key]
         public int Id { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
@@ -13,6 +16,7 @@
         public decimal BodyFatPercentage { get; set; } 
         public decimal ActivityLevel { get; set; }
         public int GoalCalories { get; set; }
+        public ICollection<FoodItem> FoodItems { get; set; }
     }
 
 }

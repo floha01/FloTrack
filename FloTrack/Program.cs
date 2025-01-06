@@ -1,4 +1,10 @@
+using FloTrack.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite("Data Source=database.db"));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
